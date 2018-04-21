@@ -4,7 +4,7 @@
 
 // Author: Yair
 // Date: 03-04-18
-// Compiler and Interpeter for programming language brainfuck or in the future with some changes a new programming language
+// C Code Template for the Compiler, in the future add here some changes and features to create a new programming language
 
 
 // GLOBAL VARIABLES
