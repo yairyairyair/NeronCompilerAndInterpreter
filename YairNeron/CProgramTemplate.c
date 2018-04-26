@@ -11,7 +11,9 @@
 char array[MAX_ARRAY_SIZE] = { 0 };
 char *ptr = array;
 
+// TODO MAYBE ADD HERE ARGC AND ARGV
 int main()
 {
-
+	%s
+	return 0;
 }
