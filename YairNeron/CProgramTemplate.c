@@ -11,9 +11,41 @@
 char array[MAX_ARRAY_SIZE] = { 0 };
 char *ptr = array;
 
-// TODO MAYBE ADD HERE ARGC AND ARGV
-int main()
+void writeCharToArrayAndIncrementPointer(char c)
 {
+	*ptr = c;
+	ptr++;
+}
+// TODO MAYBE ADD HERE ARGC AND ARGV
+int main(int argc,char** argv)
+{
+
+	// argc and argv variables
+	// the argc is stores at the first cell and the argv's stores in the cells afterwards, each of ends with zero byte
+	{
+		int i;
+		char* ptrArgvCharCurrent;
+		writeCharToArrayAndIncrementPointer(argc);
+
+		for (i = 0; i < argc; i++) {
+			// now we should write the argv strings
+			ptrArgvCharCurrent = argv[i];
+			while (ptrArgvCharCurrent)
+			{
+				// writing it to array stream
+				writeCharToArrayAndIncrementPointer(*ptrArgvCharCurrent);
+				// incrementing in order to point to the char in the argv string
+				ptrArgvCharCurrent++;
+			}
+			// we reached end of string at argv[i], now we should write the null-terminator, the 0 byte
+			writeCharToArrayAndIncrementPointer(0);
+		}
+		// going back to the start of the array
+		ptr = array;
+	}
+
+	// assigning the brainfuck code here
 	%s
-	return 0;
+	// exit code is based on the current cell data
+	return *ptr;
 }

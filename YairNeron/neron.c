@@ -11,6 +11,7 @@
 // GLOBAL VARIABLES
 char array[MAX_ARRAY_SIZE] = { 0 };
 char *ptr = array;
+// This is the file for		
 FILE* mainCodeFile = NULL;
 char* mainCodeFileName = NULL;
 // TODO MAYBE CHANGE THIS VARIABLE TO BE NOT GLOBAL BUT INSIDE THE RELEVANT FUNCTIONS
